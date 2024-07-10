@@ -16,13 +16,26 @@ const Hero = () => {
         <button className="px-6 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-800">DEMO</button>
       </div>
       <div className="mt-10">
-        <img
-          src="path/to/your/ring-image.jpg"
-          alt="Ring"
-          className="w-64 h-auto"
-        />
+        <model-viewer
+          id="bangleViewer"
+          src="models/bridge.glb"
+          alt="Bangle"
+          ar
+          ar-modes="scene-viewer quick-look webxr"
+          camera-controls
+          environment-image="neutral"
+          auto-rotate
+          style={{ width: '100%', height: '500px' }}
+        ></model-viewer>
       </div>
-      <button className="mt-6 px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-800">AR - Try On</button>
+      <button
+        className="mt-6 px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-800"
+        onClick={() => {
+          document.getElementById('bangleViewer').activateAR();
+        }}
+      >
+        AR - Try On
+      </button>
     </div>
   );
 };
