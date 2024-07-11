@@ -1,24 +1,27 @@
-model-viewer {
-    width: 100%;
-    height: auto;
-    max-width: 600px;
-    max-height: 400px;
-    display: block;
-    margin: 0 auto;
+.model-viewer {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 600px !important;
+  max-height: 400px !important;
+  margin: 0 auto !important; /* Center the model */
+}
+
+@media (max-width: 768px) {
+  .model-viewer {
+    max-width: 400px !important;
+    max-height: 300px !important;
   }
-  
-  @media (max-width: 768px) {
-    model-viewer {
-      max-width: 400px;
-      max-height: 300px;
-    }
+}
+
+@media (max-width: 480px) {
+  .model-viewer {
+    max-width: 300px !important;
+    max-height: 250px !important;
   }
-  
-  @media (max-width: 480px) {
-    model-viewer {
-      max-width: 300px;
-      max-height: 250px;
-      margin-top: 10px; /* Decrease top margin for mobile screens */
-    }
-  }
-  
+}
+
+.userInput.show {
+  /* Your styles here */
+  width: 400px;
+  height: 300px;
+}

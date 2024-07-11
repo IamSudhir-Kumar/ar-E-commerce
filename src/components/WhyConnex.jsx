@@ -6,11 +6,16 @@ const WhyConnex = () => {
       <h2 className="text-4xl font-bold text-gray-900 mb-6 text-center">Why CONNEX? Right Now!</h2>
       <div className="flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0 md:space-x-12">
         <div className="flex-shrink-0">
-          <img
+          {/* <img
             src="path/to/your/head-image.jpg"
             alt="Head"
             className="w-64 h-auto"
-          />
+          /> */}
+          <model-viewer
+          src="models/girls-face.glb"
+          camera-controls
+          auto-rotate
+          ></model-viewer>
         </div>
         <div className="max-w-lg">
           <div className="mb-4">
