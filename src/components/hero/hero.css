@@ -1,0 +1,24 @@
+model-viewer {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    max-height: 400px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  @media (max-width: 768px) {
+    model-viewer {
+      max-width: 400px;
+      max-height: 300px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    model-viewer {
+      max-width: 300px;
+      max-height: 250px;
+      margin-top: 10px; /* Decrease top margin for mobile screens */
+    }
+  }
+  
