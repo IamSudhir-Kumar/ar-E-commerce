@@ -58,7 +58,7 @@ const Hero = () => {
                 environment-image="neutral"
                 auto-rotate
                 ar
-                ar-scale="0.5"  // Adjust this value to scale the model in AR mode
+                ar-scale="0.005"  // Adjust this value to scale the model in AR mode
                 style={{ width: '100%', height: '500px' }}
               ></model-viewer>
             </div>
