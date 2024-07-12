@@ -21,7 +21,16 @@
 }
 
 .userInput.show {
-  /* Your styles here */
   width: 400px;
   height: 300px;
+}
+
+.userInput{
+  display: none;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }

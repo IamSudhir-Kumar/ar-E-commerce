@@ -2,7 +2,7 @@ import React from 'react';
 
 const Services = () => {
   return (
-    <div className="bg-[#727e7b] py-12">
+    <div className="bg-[url('assets/d1.png')] py-12">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Our Services</h2>
         <div className="bg-white rounded-lg p-6 shadow-lg flex flex-col md:flex-row md:space-x-6">

@@ -33,7 +33,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-[75vh] p-4 bg-gradient-to-r from-gray-100 to-gray-200">
+    <div className="flex flex-col items-center justify-center min-h-[75vh] p-4 bg-[url('assets/d3.png')]">
       <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-6xl space-y-4 md:space-y-0 md:space-x-4">
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
           <h1 className="text-5xl font-extrabold text-gray-800 mb-4">VIRTUAL TRY-ON</h1>
@@ -55,6 +55,7 @@ const Hero = () => {
               {models.map((model, index) => (
                 <div key={index}>
                   <model-viewer
+                    className="model-viewer"
                     id={`model-viewer-${index}`}
                     src={model.src}
                     alt={model.alt}
@@ -63,7 +64,6 @@ const Hero = () => {
                     auto-rotate
                     ar
                     ar-scale="0.005" // Adjust this value to scale the model in AR mode
-                   
                   ></model-viewer>
                 </div>
               ))}

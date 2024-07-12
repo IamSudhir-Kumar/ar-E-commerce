@@ -5,6 +5,7 @@ import WhyConnex from './WhyConnex.jsx';
 import Services from './Services.jsx';
 import ContactUs from './ContactUs.jsx';
 import Footer from './Footer.jsx';
+import PlansPricing from './Pricing.jsx';
 
 const HomePage = () => {
   return (
@@ -13,6 +14,7 @@ const HomePage = () => {
       <Hero />
       <WhyConnex />
       <Services />
+      <PlansPricing />
       <ContactUs />
       <Footer />
     </div>
