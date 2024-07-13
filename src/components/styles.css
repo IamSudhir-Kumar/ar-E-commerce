@@ -1,0 +1,9 @@
+.model-view-css-fix{
+  object-fit: contain;
+  height: 80vh;
+  width:auto;  
+}
+model-viewer {
+  width: 60vh;
+  height: 70vh;
+} 

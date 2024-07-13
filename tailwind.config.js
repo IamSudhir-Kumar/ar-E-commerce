@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      Poppins: ["Poppins", "sans-serif"],
+      // Add more custom font families as needed
+    },
     
   },
   plugins: [],

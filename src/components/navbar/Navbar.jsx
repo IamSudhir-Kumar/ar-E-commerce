@@ -15,6 +15,7 @@ const Navbar = () => {
         <div className="hidden md:flex space-x-6">
           <ul className="flex space-x-6 m-0">
             <li className="text-white hover:text-gray-300 cursor-pointer">Home</li>
+            <li className="text-white hover:text-gray-300 cursor-pointer">Argumented Reality Try-on</li>
             <li className="text-white hover:text-gray-300 cursor-pointer">Products</li>
             <li className="text-white hover:text-gray-300 cursor-pointer">Price</li>
             <li className="text-white hover:text-gray-300 cursor-pointer">Contact us</li>
