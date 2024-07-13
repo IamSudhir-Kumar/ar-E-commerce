@@ -69,6 +69,7 @@ const Hero = () => {
                     auto-rotate
                     animation-played
                     ar
+                    disable-zoom
                     ar-scale="0.005" // Adjust this value to scale the model in AR mode
                   ></model-viewer>
                 </div>

@@ -15,6 +15,7 @@ const WhyConnex = () => {
             src="models/girls-face.glb"
             camera-controls
             auto-rotate
+            disable-zoom
           ></model-viewer>
         </div>
         <div className="max-w-xl font-Poppins">
