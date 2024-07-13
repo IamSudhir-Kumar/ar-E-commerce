@@ -4,7 +4,7 @@ const PlansPricing = () => {
   const [isMonthly, setIsMonthly] = useState(true);
 
   return (
-    <div className="bg-[url('assets/d3.png')] bg-cover bg-center min-h-screen flex flex-col items-center text-white">
+    <div className="bg-[url('background-images/d3.png')] bg-cover bg-center min-h-screen flex flex-col items-center text-white">
       <h2 className="text-4xl font-bold mt-12 mb-4">PLANS & PRICING</h2>
       <p className="text-xl text-center mb-8">
         Cost of a license to use a 3D viewer and virtual Try-on widget. Choose the appropriate tariff plan, depending on the traffic to your site:
