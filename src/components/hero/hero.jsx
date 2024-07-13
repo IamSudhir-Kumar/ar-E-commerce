@@ -33,7 +33,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-[90vh] p-4 bg-[url('assets/d3.png')]">
+    <div className="flex flex-col items-center justify-center min-h-[90vh] p-4 bg-[url('background-images/d3.png')]">
       <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-6xl space-y-4 md:space-y-0 md:space-x-4">
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
           <h1 className="text-8xl font-extrabold text-white mb-4 font-Poppins">
