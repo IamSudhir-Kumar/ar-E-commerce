@@ -13,7 +13,7 @@ const Navbar = () => {
     <nav className="w-full bg-[#384241] py-4">
       <div className="container mx-auto flex justify-between items-center px-4">
         <div className="text-white text-2xl font-bold">
-        <img src="../../background-images/logo.png" alt="Logo" className="h-10 w-auto mr-2" />
+        <img src="assets/logo.png" alt="Logo" className="h-10 w-auto mr-2" />
           </div>
         <div className="hidden md:flex space-x-6">
           <ul className="flex space-x-6 m-0">
