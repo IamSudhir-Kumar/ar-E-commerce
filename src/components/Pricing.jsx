@@ -25,7 +25,7 @@ const PlansPricing = () => {
       </div>
       <div className="bg-[#384241] w-full max-w-6xl rounded-lg shadow-lg p-6 flex flex-col md:flex-row md:space-x-6">
         <div className="flex-1 bg-gray-700 rounded-lg p-8">
-          <button class="bg-[#384241] text-white font-semibold px-4 py-2 rounded-full shadow-lg shadow-[#87a09e]">
+          <button className="bg-[#384241] text-white font-semibold px-4 py-2 rounded-full shadow-lg shadow-[#87a09e]">
             <a href="https://calendly.com/sudhir09014902020-msijanakpuri/meeting-regarding-price-plans" target='_blank'>Contact Us</a>
           </button>
 

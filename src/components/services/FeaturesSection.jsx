@@ -36,7 +36,7 @@ const FeaturesSection = () => {
             Our Architectural 3D Services bring your architectural designs to life with stunning, realistic 3D models and visualizations.
           </p>
         </div>
-        <img src="assets/ar.jpg" alt="Architectural Services" className="rounded-b-[80px] w-23 h-50 mt-4" />
+        <img src="assets/arc.jpg" alt="Architectural Services" className="rounded-b-[80px] w-23 h-50 mt-4" />
       </div>
     </div>
   );
