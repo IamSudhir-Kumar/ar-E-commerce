@@ -3,7 +3,7 @@ import '../styles.css';
 
 const WhyConnex = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-[70vh] p-16 bg-[url(background-images/d2.png)]">
+    <div className="flex flex-col items-center justify-center min-h-[70vh] p-16 bg-[url(background-images/d2.png)] bg-contain">
       <div className="w-full max-w-6xl">
         <h2 className="text-7xl font-bold text-[#384241] mb-10 text-left font-Poppins">
           Why CONNEX? <br />Right Now!

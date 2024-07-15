@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContactUs = () => {
   return (
-    <div className="min-h-screen py-12 flex flex-col items-center bg-[url(background-images/d2.png)] font-Poppins" id="contact-us">
+    <div className="min-h-screen py-12 flex flex-col items-center bg-[url(background-images/d2.png)] font-Poppins bg-contain" id="contact-us">
       <h2 className="text-5xl font-bold mb-2" style={{ color: '#394241' }}>CONTACT US</h2>
       <p className="mb-6" style={{ color: '#394241' }}>A member of our team will get back to you shortly.</p>
       <form className="bg-white bg-opacity-10 shadow-md rounded-lg p-8 w-full max-w-lg backdrop-blur-lg border border-opacity-25 border-white">
