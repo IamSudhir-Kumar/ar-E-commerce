@@ -12,5 +12,16 @@ export default {
     },
     
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.placeholder-left::placeholder': {
+          textAlign: 'left',
+          paddingLeft: '1px', // Adjust padding-left as needed
+        },
+      };
+
+      addUtilities(newUtilities, ['responsive', 'hover']);
+    },
+  ],
 }

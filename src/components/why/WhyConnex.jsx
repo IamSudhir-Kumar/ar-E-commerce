@@ -12,7 +12,7 @@ const WhyConnex = () => {
       <div className="flex flex-col md:flex-row items-center justify-between space-y-16 md:space-y-0 md:space-x-16 w-full max-w-6xl">
         <div className="flex-shrink-0">
           <model-viewer
-            src="models/girls-face.glb"
+            src="models/fv.glb"
             camera-controls
             auto-rotate
             disable-zoom
