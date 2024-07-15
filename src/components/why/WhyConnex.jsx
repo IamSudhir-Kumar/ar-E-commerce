@@ -5,7 +5,7 @@ const WhyConnex = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-[70vh] p-16 bg-[url(background-images/d2.png)] bg-contain">
       <div className="w-full max-w-6xl">
-        <h2 className="text-7xl font-bold text-[#384241] mb-10 text-left font-Poppins">
+        <h2 className="text-7xl font-bold text-[#384241] text-left font-Poppins">
           Why CONNEX? <br />Right Now!
         </h2>
       </div>
@@ -20,16 +20,16 @@ const WhyConnex = () => {
         </div>
         <div className="max-w-xl font-Poppins">
           <div className="mb-8">
-            <h3 className="text-3xl font-bold text-[#384241]">TRY IT ON IN SECONDS</h3>
-            <p className="text-[#384241] mt-4">CONNEX allows your customers to try on products in seconds without waiting for days!</p>
+            <h3 className="text-3xl font-bold text-[#384241] mb-2">TRY IT ON IN SECONDS</h3>
+            <p className="text-[#384241] mt-0 text-2xl">CONNEX allows your customers to try on products in seconds without waiting for days!</p>
           </div>
           <div className="mb-8">
-            <h3 className="text-3xl font-bold text-[#384241]">ACCURATE, FAST & LIGHTWEIGHT</h3>
-            <p className="text-[#384241] mt-4">CONNEX is proven to be accurate, fast and lightweight virtual try on, helps you in brand differentiation.</p>
+            <h3 className="text-3xl font-bold text-[#384241] mb-2">ACCURATE, FAST & LIGHTWEIGHT</h3>
+            <p className="text-[#384241] mt-0 text-2xl">CONNEX is proven to be accurate, fast and lightweight virtual try on, helps you in brand differentiation.</p>
           </div>
           <div>
-            <h3 className="text-3xl font-bold text-[#384241]">DOUBLE SALES, HALF RETURNS</h3>
-            <p className="text-[#384241] mt-4">We have been helping global brands to achieve double sales, triple visitors and half the product returns.</p>
+            <h3 className="text-3xl font-bold text-[#384241] mb-2">DOUBLE SALES, HALF RETURNS</h3>
+            <p className="text-[#384241] mt-0 text-2xl">We have been helping global brands to achieve double sales, triple visitors and half the product returns.</p>
           </div>
         </div>
       </div>
