@@ -9,7 +9,7 @@ import PlansPricing from './Pricing.jsx';
 
 const HomePage = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col" id='home'>
       <Navbar />
       <Hero />
       <WhyConnex />

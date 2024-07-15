@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContactUs = () => {
   return (
-    <div className="bg-[url(background-images/d2.png)] min-h-screen py-12 flex flex-col items-center bg-cover">
+    <div className="bg-[url(background-images/d2.png)] min-h-screen py-12 flex flex-col items-center bg-cover" id='contact-us'>
       <h2 className="text-4xl font-bold text-black mb-2">CONTACT US</h2>
       <p className="text-gray-800 mb-6">A member of our team will get back to you shortly.</p>
       <form className="bg-white shadow-md rounded-lg p-8 w-full max-w-lg">
