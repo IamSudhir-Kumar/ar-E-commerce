@@ -6,15 +6,14 @@ const ContactUs = () => {
       <h2 className="text-5xl font-bold mt-16" style={{ color: '#394241' }}>CONTACT US</h2>
       <p className="font-semibold text-2xl mt-6" style={{ color: '#394241' }}>A member of our team will get back to you shortly.</p>
 
-      <form className="bg-white bg-opacity-10 mt-6 rounded-lg p-8 w-full max-w-xl backdrop-blur-lg border border-opacity-25 border-white">
+      <form className="bg-opacity-0 mt-6 rounded-lg p-8 w-full max-w-xl border border-opacity-25 border-white">
         <div className="grid grid-cols-1 gap-4 mb-6">
           <div className="col-span-1">
             <label className="block text-sm font-bold mb-2" htmlFor="name" style={{ color: '#394241' }}>
-             
             </label>
             <div className="relative">
               <input
-                className="w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline bg-transparent border-b-2 border-gray-300 focus:border-gray-800 placeholder-gray-400"
+                className="w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline bg-transparent border-b-2 border-gray-400 focus:border-gray-800 placeholder-gray-800"
                 id="name"
                 type="text"
                 placeholder="Name"
@@ -25,11 +24,10 @@ const ContactUs = () => {
           </div>
           <div className="col-span-1">
             <label className="block text-sm font-bold mb-2" htmlFor="email" style={{ color: '#394241' }}>
-              
             </label>
             <div className="relative">
               <input
-                className="w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline bg-transparent border-b-2 border-gray-300 focus:border-gray-800 placeholder-gray-400"
+                className="w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline bg-transparent border-b-2 border-gray-400 focus:border-gray-800 placeholder-gray-800"
                 id="email"
                 type="email"
                 placeholder="Email"
@@ -41,11 +39,10 @@ const ContactUs = () => {
         </div>
         <div className="mb-6">
           <label className="block text-sm font-bold mb-2" htmlFor="phone" style={{ color: '#394241' }}>
-           
           </label>
           <div className="relative">
             <input
-              className="w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline bg-transparent border-b-2 border-gray-300 focus:border-gray-800 placeholder-gray-400"
+              className="w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline bg-transparent border-b-2 border-gray-400 focus:border-gray-800 placeholder-gray-800"
               id="phone"
               type="tel"
               placeholder="Phone"
@@ -56,11 +53,10 @@ const ContactUs = () => {
         </div>
         <div className="mb-6">
           <label className="block text-sm font-bold mb-2" htmlFor="company" style={{ color: '#394241' }}>
-            
           </label>
           <div className="relative">
             <input
-              className="w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline bg-transparent border-b-2 border-gray-300 focus:border-gray-800 placeholder-gray-400"
+              className="w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline bg-transparent border-b-2 border-gray-400 focus:border-gray-800 placeholder-gray-800"
               id="company"
               type="text"
               placeholder="Company"
@@ -71,11 +67,10 @@ const ContactUs = () => {
         </div>
         <div className="mb-6">
           <label className="block text-sm font-bold mb-2" htmlFor="message" style={{ color: '#394241' }}>
-            
           </label>
           <div className="relative">
             <textarea
-              className="w-full py-10 px-3 leading-tight focus:outline-none focus:shadow-outline bg-transparent border-b-2 border-gray-300 focus:border-gray-800 placeholder-gray-400"
+              className="w-full py-10 px-3 leading-tight focus:outline-none focus:shadow-outline bg-transparent border-b-2 border-gray-400 focus:border-gray-800 placeholder-gray-800"
               id="message"
               placeholder="Message"
               style={{ color: '#394241' }}

@@ -7,6 +7,7 @@ const Hero = () => {
   const settings = {
     infinite: true,
     speed: 500,
+    fade: true,
     arrows: false,
     slidesToShow: 1,
     slidesToScroll: 1,
