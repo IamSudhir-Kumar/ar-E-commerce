@@ -5,7 +5,7 @@ import WhyConnex from './why/WhyConnex.jsx';
 import Services from './services/Services.jsx';
 import ContactUs from './ContactUs.jsx';
 import Footer from './Footer.jsx';
-import PlansPricing from './Pricing.jsx';
+import PlansPricing from './pricing/Pricing.jsx';
 
 const HomePage = () => {
   return (

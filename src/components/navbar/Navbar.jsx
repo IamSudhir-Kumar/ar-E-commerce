@@ -21,7 +21,7 @@ const Navbar = () => {
           </button>
         </div>
         <div className={`md:flex flex-grow items-center ${isOpen ? 'block' : 'hidden'}`}>
-          <ul className="flex space-x-6 ml-[400px] font-Poppins text-xl"> {/* Adjusted menu items position */}
+          <ul className="flex space-x-6 ml-[350px] font-Poppins text-xl"> {/* Adjusted menu items position */}
             <li>
               <Link to="home" smooth={true} duration={500} offset={-50} className="text-white hover:text-gray-300 cursor-pointer">Home</Link>
             </li>
@@ -36,6 +36,12 @@ const Navbar = () => {
             </li>
             <li>
               <Link to="contact-us" smooth={true} duration={500} offset={-50} className="text-white hover:text-gray-300 cursor-pointer">Contact us</Link>
+            </li>
+            <li>
+            <a href="#ar-tryon" className="text-white hover:text-gray-300 cursor-pointer">Blogs</a>
+            </li>
+            <li>
+            <a href="#ar-tryon" className="text-white hover:text-gray-300 cursor-pointer">Career</a>
             </li>
           </ul>
         </div>
