@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
-import Prices from './prices';
 
 const PlansPricing = () => {
   const [isMonthly, setIsMonthly] = useState(true);
 
+  const plans = [
+    { title: 'Starter', monthly: '$99', annually: '$999', traffic: 'Less than 20,000' },
+    { title: 'Growth', monthly: '$199', annually: '$1999', traffic: '20k - 100k' },
+    { title: 'Business', monthly: '$499', annually: '$4999', traffic: '100k - 250k' },
+    { title: 'Enterprise', monthly: 'Let’s talk', annually: 'Let’s talk', traffic: 'More than 250,000' }
+  ];
+
   return (
     <div className="bg-[url('background-images/d5.png')] bg-contain bg-center min-h-screen flex flex-col items-center text-white font-Poppins" id='pricing'>
-      <h2 className="text-4xl font-bold mt-12 mb-4">PLANS & PRICING</h2>
+      <h2 className="text-4xl font-bold mt-10 mb-4">PLANS & PRICING</h2>
       <p className="text-2xl text-center mb-8 p-5 justify-center">
         Cost of a license to use a 3D viewer and virtual Try-on widget. Choose the<br /> appropriate tariff plan, depending on the traffic to your site:
       </p>
@@ -24,18 +30,24 @@ const PlansPricing = () => {
           Annually Fee
         </button>
       </div>
-      {/* <div className="bg-[#384241] w-full max-w-6xl rounded-lg shadow-lg p-6 flex flex-col md:flex-row md:space-x-6">
-        <div className="flex-1 bg-gray-700 rounded-lg p-8">
-          <button className="bg-[#384241] text-white font-semibold px-4 py-2 rounded-full shadow-lg shadow-[#87a09e]">
-            <a href="https://calendly.com/sudhir09014902020-msijanakpuri/meeting-regarding-price-plans" target='_blank'>Contact Us</a>
-          </button>
-
-        </div>
-        <div className="flex-1 bg-gray-700 rounded-lg p-8"></div>
-        <div className="flex-1 bg-gray-700 rounded-lg p-8"></div>
-      </div> */}
-
-      <Prices isMonthly={isMonthly} />
+      <div className="bg-[#384241] w-full max-w-6xl rounded-[80px] shadow-lg p-10 mb-9 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 relative">
+        {plans.map((plan, index) => (
+          <div key={index} className="flex flex-col items-center bg-[#384241] rounded-lg p-8 shadow-lg relative">
+            <h3 className="text-2xl font-bold text-white mb-4">{plan.title}</h3>
+            <p className="text-sm mt-2 mb-2">{plan.traffic}</p>
+            <p className="text-4xl font-bold mb-4">{isMonthly ? plan.monthly : plan.annually}</p>
+            <p className="text-sm mb-6">{isMonthly ? 'per month' : 'per year'}</p>
+            <button className="bg-[#5c6868] text-white font-bold py-2 px-4 rounded-full hover:bg-green-900 transition duration-300">
+              {plan.title === 'Enterprise' ? 
+                <a href="https://calendly.com/sudhir09014902020-msijanakpuri/meeting-regarding-price-plans" target='_blank'>Contact Us</a> 
+                : 'Sign Up Now'}
+            </button>
+            {index < plans.length - 1 && (
+              <div className="absolute top-0 right-0 h-full w-[2px] bg-gradient-to-b from-transparent via-white to-transparent transform translate-x-1/2"></div>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
