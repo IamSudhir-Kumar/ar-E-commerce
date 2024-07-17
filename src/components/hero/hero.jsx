@@ -33,52 +33,47 @@ const Hero = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-[90vh] p-4 bg-[url('background-images/d5.png')] bg-contain">
+    <div className="flex flex-col items-center justify-center min-h-[90vh] p-4 bg-[url('background-images/d5.png')] bg-cover bg-no-repeat bg-center">
       <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-6xl space-y-4 md:space-y-0 md:space-x-4">
-        <div className="flex flex-col items-center md:items-start text-center md:text-left">
-          <h1 className="text-6xl font-extrabold text-white mb-4 font-Poppins">
+        <div className="flex flex-col items-center md:items-start text-center md:text-left w-full md:w-1/2 lg:w-1/3">
+          <h1 className="text-4xl sm:text-6xl font-extrabold text-white mb-4 font-Poppins">
             VIRTUAL <br /> TRY-ON
           </h1>
-          <p className="text-white text-base mb-4 max-w-4xl font-Poppins leading-relaxed">
+          <p className="text-white text-base mb-4 max-w-lg font-Poppins leading-relaxed">
             Powerful tools for creating and distributing lifelike 3D content and AR experiences. Elevate e-commerce, digital marketing, and more to boost engagement and drive sales.
           </p>
           <div className="flex justify-center mt-2 my-5">
-            <div className="bg-[#5c6868] rounded-full p-2 flex items-center space-x-3 mb-7">
+            <div className="bg-[#5c6868] rounded-full p-2 flex items-center space-x-3 mb-7 w-full md:w-auto">
               <input
                 type="email"
                 placeholder="Business e-mail"
-                className="px-24 py-3 border border-gray-400 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 text-center"
+                className="flex-1 px-4 py-2 border border-gray-400 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 text-center"
               />
-              <button className="px-6 py-3 bg-[#a0aeb7] text-white rounded-full hover:bg-[#384241]">
+              <button className="px-6 py-2 bg-[#a0aeb7] text-white rounded-full hover:bg-[#384241]">
                 DEMO
               </button>
             </div>
           </div>
         </div>
-        <div className="relative w-full flex">
-          <div className="flex-1">
-            {/* Other content on the left side */}
-          </div>
-          <div className="flex flex-col items-center w-full md:w-3/4 lg:w-2/3 mr-5">
-            <div className="w-full max-w-3xl">
-              <Slider {...settings}>
-                {models.map((model, index) => (
-                  <div key={index}>
-                    <model-viewer
-                      className="model-viewer"
-                      id={`model-viewer-${index}`}
-                      src={model.src}
-                      alt={model.alt}
-                      camera-controls
-                      environment-image="neutral"
-                      auto-rotate
-                      animation-played
-                      disable-zoom
-                    ></model-viewer>
-                  </div>
-                ))}
-              </Slider>
-            </div>
+        <div className="relative w-full md:w-1/2 lg:w-2/3 flex justify-center items-center">
+          <div className="w-full max-w-lg">
+            <Slider {...settings}>
+              {models.map((model, index) => (
+                <div key={index}>
+                  <model-viewer
+                    className="model-viewer"
+                    id={`model-viewer-${index}`}
+                    src={model.src}
+                    alt={model.alt}
+                    camera-controls
+                    environment-image="neutral"
+                    auto-rotate
+                    animation-played
+                    disable-zoom
+                  ></model-viewer>
+                </div>
+              ))}
+            </Slider>
           </div>
         </div>
       </div>

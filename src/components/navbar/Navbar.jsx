@@ -50,7 +50,8 @@ const Navbar = () => {
         <div className="md:hidden bg-gray-800 px-4 pt-4 pb-2">
           <ul className="flex flex-col space-y-2">
             <li>
-              <a href="#home" className="text-white hover:text-gray-300 cursor-pointer">Home</a>
+              {/* <a href="#home" className="text-white hover:text-gray-300 cursor-pointer">Home</a> */}
+              <Link to="home" smooth={true} duration={500} offset={-50}>Home</Link>
             </li>
             <li>
               <a href="#ar-tryon" className="text-white hover:text-gray-300 cursor-pointer">Augmented Reality Try-on</a>
