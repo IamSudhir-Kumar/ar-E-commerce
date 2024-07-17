@@ -21,8 +21,6 @@ const PlansPricing = () => {
       annually: '$1999', 
       traffic: '20k - 100k',
       points: [
-        ' Installation support',
-        ' Content management',
         ' Analytics',
         ' 24/7 support',
         ' Advanced analytics'
@@ -34,10 +32,6 @@ const PlansPricing = () => {
       annually: '$4999', 
       traffic: '100k - 250k',
       points: [
-        ' Installation support',
-        ' Content management',
-        ' Analytics',
-        ' 24/7 support',
         ' Advanced analytics',
         ' UX consultation',
         ' Multi Domain support'
@@ -49,13 +43,6 @@ const PlansPricing = () => {
       annually: 'Let’s talk', 
       traffic: 'More than 250,000',
       points: [
-        ' Installation support',
-        ' Content management',
-        ' Analytics',
-        ' 24/7 support',
-        ' Advanced analytics',
-        ' UX consultation',
-        ' Multi Domain support',
         ' Personal manager',
         ' UI customization',
         ' Live onboarding'
@@ -85,7 +72,7 @@ const PlansPricing = () => {
       </div>
       <div className="bg-[#384241] w-full max-w-6xl rounded-[80px]  p-8 mb-9 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {plans.map((plan, index) => (
-          <div key={index} className="flex flex-col items-center bg-[#384241] rounded-lg p-4 py-0  relative">
+          <div key={index} className="flex flex-col items-center bg-[#384241] rounded-lg p-4 py-20  relative">
             <h3 className="text-2xl font-bold text-white mb-4">{plan.title}</h3>
             <p className="text-sm mt-2 mb-2">{plan.traffic}</p>
             <p className="text-4xl font-bold mb-4">{isMonthly ? plan.monthly : plan.annually}</p>
