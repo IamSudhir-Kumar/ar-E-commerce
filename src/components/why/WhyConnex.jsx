@@ -20,7 +20,7 @@ const WhyConnex = () => {
             style={{ minHeight: '250px', maxHeight: '500px' }}
           ></model-viewer>
         </div>
-        <div className="max-w-xl">
+        <div className="max-w-xl font-Poppins">
           <div className="mb-8">
             <h3 className="text-2xl sm:text-3xl lg:text-3xl font-bold text-[#384241] mb-2">TRY IT ON IN SECONDS</h3>
             <p className="text-[#384241] mt-0 text-lg sm:text-2xl">CONNEX allows your customers to try on products in seconds without waiting for days!</p>
