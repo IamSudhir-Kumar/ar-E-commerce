@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import LazyLoad from 'react-lazyload';
+
+// Check if 'model-viewer' is already defined
+if (!customElements.get('model-viewer')) {
+  import('@google/model-viewer');
+}
 
 const Hero = () => {
   const settings = {
@@ -60,17 +66,18 @@ const Hero = () => {
             <Slider {...settings}>
               {models.map((model, index) => (
                 <div key={index} className="flex justify-center">
-                  <model-viewer
-                    className="model-viewer"
-                    id={`model-viewer-${index}`}
-                    src={model.src}
-                    alt={model.alt}
-                    camera-controls
-                    disable-zoom
-                    environment-image="neutral"
-                    auto-rotate
-                    style={{ width: '100%', height: '100%', minHeight: '400px' }}
-                  ></model-viewer>
+                  <LazyLoad height={400} offset={100}>
+                    <model-viewer
+                      className="model-viewer"
+                      id={`model-viewer-${index}`}
+                      src={model.src}
+                      alt={model.alt}
+                      camera-controls
+                      disable-zoom
+                      environment-image="neutral"
+                      auto-rotate
+                    ></model-viewer>
+                  </LazyLoad>
                 </div>
               ))}
             </Slider>
