@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment } from '@react-three/drei';
 import "./hero.css";
-import Jordan from '../models/Jordan1';
+import Ring from '../models/Ring'; // Ensure the model import path is correct
 
 const Hero = () => {
   return (
@@ -32,10 +32,10 @@ const Hero = () => {
           <div className="w-full max-w-lg h-[400px] md:h-full">
             <Canvas>
               <Suspense fallback={null}>
-                <ambientLight intensity={5} />
+                <ambientLight intensity={3} />
                 <directionalLight position={[5, 5, 5]} />
-                <Environment preset="forest"  />
-                <Jordan position={[0, -0.5, 0]} scale={[1, 1, 1]}/>
+                <Environment preset="apartment" />
+                <Ring position={[0, -0.1, 0]} scale={[18, 18, 18]} rotation={[-0.9, Math.PI, Math.PI/5]} />
                 <OrbitControls enableZoom={false} />
               </Suspense>
             </Canvas>
