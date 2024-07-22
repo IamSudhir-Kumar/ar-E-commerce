@@ -82,7 +82,7 @@ const PlansPricing = () => {
           Annually Fee
         </button>
       </div>
-      <div className="w-full max-w-6xl lg:bg-[#384241] lg:rounded-[40px] p-4 sm:p-8">
+      <div className="w-full max-w-6xl lg:bg-[#384241] lg:rounded-[40px] p-4 sm:p-8 mb-5">
         <div className="hidden lg:grid lg:grid-cols-4 lg:gap-0 rounded-[40px] overflow-hidden">
           {plans.map((plan, index) => (
             <div key={index} className="relative flex flex-col items-center bg-[#384241] p-4 py-8 text-center border border-gray-700">
