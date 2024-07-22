@@ -52,9 +52,9 @@ const Navbar = () => {
               )}
             </li>
             <li>
-              <RouterLink to="/ar-tryon" className="text-white hover:text-gray-300 cursor-pointer">
+              {/* <RouterLink to="/ar-tryon" className="text-white hover:text-gray-300 cursor-pointer">
                 Augmented Reality Try-on
-              </RouterLink>
+              </RouterLink> */}
             </li>
             <li>
               {location.pathname === '/' ? (
@@ -112,11 +112,11 @@ const Navbar = () => {
                 Blogs
               </a>
             </li>
-            <li>
+            {/* <li>
               <a href="#career" className="text-white hover:text-gray-300 cursor-pointer">
                 Career
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
@@ -207,11 +207,11 @@ const Navbar = () => {
                 Blogs
               </a>
             </li>
-            <li>
+            {/* <li>
               <a href="#career" className="text-white hover:text-gray-300 cursor-pointer" onClick={toggleMenu}>
                 Career
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </CSSTransition>

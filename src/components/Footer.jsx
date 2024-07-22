@@ -16,6 +16,10 @@ const Footer = () => {
           <ul>
             <li><a href="#" className="hover:underline">LinkedIn</a></li>
           </ul>
+
+          <h3>
+          <a href="./career"  className="font-bold mt-3 text-xl capitalise">Career</a>
+          </h3>
         </div>
         <div className="text-left w-full lg:w-1/3">
           <h3 className="font-bold mb-2 text-lg">Contact Us</h3>

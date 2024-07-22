@@ -1,9 +1,15 @@
 import React from 'react';
+import { Link as RouterLink, useLocation } from 'react-router-dom';
 
 const FeaturesSection = () => {
+  const location = useLocation();
+  
   return (
     <div className="bg-white rounded-[120px] p-10 shadow-lg flex flex-col md:flex-row md:space-x-6 relative mt-18">
-      <div className="flex-1 flex flex-col items-center justify-between p-8">
+      <RouterLink
+        to="/ar-tryon"
+        className={`flex-1 flex flex-col items-center justify-between p-8 ${location.pathname === '/ar-tryon' ? 'bg-gray-200' : ''}`}
+      >
         <div className="text-left mb-4">
           <h3 className="text-xl font-bold text-[#4d4740] font-Poppins">AUGMENTED REALITY</h3>
           <p className="text-[#4d4740] mt-2 font-Poppins font-semibold">
@@ -11,25 +17,31 @@ const FeaturesSection = () => {
           </p>
         </div>
         <img src="assets/ar.jpg" alt="Augmented Reality" className="rounded-b-[80px] w-23 h-50 mt-4" />
-      </div>
+      </RouterLink>
       {/* First gradient line */}
       <div className="absolute top-[310px] right-[20px] transform -translate-x-1/2 -translate-y-1/4 rotate-90">
         <div className="h-0.5 w-96 bg-gradient-to-r from-[#ffffff] to-[#a7a3a3] mx-auto"></div>
       </div>
-      <div className="flex-1 flex flex-col items-center justify-between p-8">
+      <RouterLink
+        to="/3d-modelling-animation"
+        className={`flex-1 flex flex-col items-center justify-between p-8 ${location.pathname === '/3d-modelling-animation' ? 'bg-gray-200' : ''}`}
+      >
         <div className="text-center mb-4">
           <img src="assets/car.jpeg" alt="3D Modelling" className="w-full h-auto mt-4" />
-          <h3 className="text-xl font-bold text-[#384241] font-Poppins mt-16">3D MODELLING <br/>& ANIMATION</h3>
+          <h3 className="text-xl font-bold text-[#384241] font-Poppins mt-16">3D MODELLING <br /> & ANIMATION</h3>
           <p className="text-[#384241] mt-2 font-Poppins font-semibold">
             3D modelling is the process of creating a three-dimensional representation of any object or surface.
           </p>
         </div>
-      </div>
+      </RouterLink>
       {/* Second gradient line */}
       <div className="absolute bottom-[320px] right-[370px] transform -translate-x-1/2 -translate-y-1/4 rotate-90">
         <div className="h-0.5 w-96 bg-gradient-to-r from-[#a7a3a3] to-[#ffffff] mx-auto"></div>
       </div>
-      <div className="flex-1 flex flex-col items-center justify-between p-8 font-Poppins">
+      <RouterLink
+        to="/architectural-3d-services"
+        className={`flex-1 flex flex-col items-center justify-between p-8 font-Poppins ${location.pathname === '/architectural-3d-services' ? 'bg-gray-200' : ''}`}
+      >
         <div className="text-right mb-4">
           <h3 className="text-xl font-bold text-[#384241] font-Poppins">ARCHITECTURAL 3D SERVICES</h3>
           <p className="text-[#384241] mt-2 font-Poppins font-semibold">
@@ -37,7 +49,7 @@ const FeaturesSection = () => {
           </p>
         </div>
         <img src="assets/arc.jpg" alt="Architectural Services" className="rounded-b-[75px] w-23 h-50 mt-4" />
-      </div>
+      </RouterLink>
     </div>
   );
 };
