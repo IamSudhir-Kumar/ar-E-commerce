@@ -1,13 +1,13 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense } from 'react';
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls } from '@react-three/drei';
+import "./hero.css"
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import LazyLoad from 'react-lazyload';
-
-// Check if 'model-viewer' is already defined
-if (!customElements.get('model-viewer')) {
-  import('@google/model-viewer');
-}
+import Drone from '../models/Drone';
+import Ipad from '../models/Ipad1';
+import Jordan from '../models/Jordan1';
 
 const Hero = () => {
   const settings = {
@@ -22,21 +22,10 @@ const Hero = () => {
   };
 
   const models = [
-    { src: "models/drone1.glb", alt: "Drone" },
-    { src: "models/ipad1.glb", alt: "iPad" },
-    { src: "models/jordan1.glb", alt: "Shoes" }
+    { Component: Drone, alt: "Drone" },
+    { Component: Ipad, alt: "iPad" },
+    { Component: Jordan, alt: "Shoes" }
   ];
-
-  const handleARClick = () => {
-    const currentSlide = document.querySelector('.slick-active model-viewer');
-    if (currentSlide) {
-      if (currentSlide.canActivateAR) {
-        currentSlide.activateAR();
-      } else {
-        alert("AR is not supported on this device or browser.");
-      }
-    }
-  };
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-4 bg-[url('background-images/d5.png')] bg-cover bg-no-repeat bg-center">
@@ -62,22 +51,18 @@ const Hero = () => {
           </div>
         </div>
         <div className="relative w-full md:w-1/2 lg:w-2/3 flex justify-center items-center">
-          <div className="w-full max-w-lg">
+          <div className="w-full max-w-lg h-[400px] md:h-full">
             <Slider {...settings}>
-              {models.map((model, index) => (
-                <div key={index} className="flex justify-center">
-                  <LazyLoad height={400} offset={100}>
-                    <model-viewer
-                      className="model-viewer"
-                      id={`model-viewer-${index}`}
-                      src={model.src}
-                      alt={model.alt}
-                      camera-controls
-                      disable-zoom
-                      environment-image="neutral"
-                      auto-rotate
-                    ></model-viewer>
-                  </LazyLoad>
+              {models.map(({ Component, alt }, index) => (
+                <div key={index} className="flex justify-center items-center h-full">
+                  <Canvas className="w-full h-full">
+                    <Suspense fallback={null}>
+                      <ambientLight intensity={0.5} />
+                      <directionalLight position={[5, 5, 5]} />
+                      <Component position={[0, -0.5, 0]} scale={[1, 1, 1]} />
+                      <OrbitControls enableZoom={false} />
+                    </Suspense>
+                  </Canvas>
                 </div>
               ))}
             </Slider>
