@@ -3,6 +3,11 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment } from '@react-three/drei';
 import "./hero.css";
 import Ring from '../models/Ring'; // Ensure the model import path is correct
+import Gold from '../models/Gold'; // Ensure the model import path is correct
+import { useGLTF } from '@react-three/drei';
+import Old from "../models/Scene"
+import New from "../models/Scene1"
+import Black from "../models/Scene2"
 
 const Hero = () => {
   const [ringColor, setRingColor] = useState('gold'); // Default color for the ring
@@ -46,11 +51,12 @@ const Hero = () => {
         </div>
         <div className="relative w-full md:w-1/2 lg:w-2/3 flex justify-center items-center">
           <div className="w-full max-w-lg h-[400px] md:h-full">
-            <Canvas>
+            {/* <Canvas>
               <Suspense fallback={null}>
                 <ambientLight intensity={4} />
                 <directionalLight position={[10, 10, 10]} intensity={2} />
                 <Environment preset="studio" />
+                
                 <Ring
                   position={[0, -0.1, 0]}
                   scale={[18, 18, 18]}
@@ -58,9 +64,51 @@ const Hero = () => {
                   ringColor={ringColor}
                   diamondColor={diamondColor}
                 />
+                <Gold 
+                 scale={[10, 10, 10]}
+                 position={[0, -0.1, 0]}
+                 rotation={[-0.9, Math.PI, Math.PI / 5]}
+                 enableZoom={true}
+                 />
                 <OrbitControls enableZoom={false} />
               </Suspense>
+            </Canvas> */}
+            <Canvas shadows camera={{ position: [0, 2, 10], fov: 35 }}>
+              <ambientLight intensity={0.5} />
+              <directionalLight
+                position={[5, 10, 5]}
+                intensity={2}
+                castShadow
+                shadow-mapSize-width={2048}
+                shadow-mapSize-height={2048}
+                shadow-camera-far={50}
+                shadow-camera-left={-10}
+                shadow-camera-right={10}
+                shadow-camera-top={10}
+                shadow-camera-bottom={-10}
+              />
+              <directionalLight
+                position={[-5, 10, -5]}
+                intensity={1.5}
+                castShadow
+              />
+              <Suspense fallback={null}>
+                <Environment preset="city" />
+                <Black
+                  scale={[7, 7, 7]}
+                  position={[0, -0.1, 0]}
+                  rotation={[-0.9, Math.PI, Math.PI / 5]}
+                  castShadow
+                  receiveShadow
+                />
+              </Suspense>
+              <OrbitControls enableZoom={true} />
+              <mesh receiveShadow position={[0, -1, 0]} rotation={[-Math.PI / 2, 0, 0]} scale={50}>
+                <planeGeometry attach="geometry" args={[100, 100]} />
+                <shadowMaterial attach="material" opacity={0.3} />
+              </mesh>
             </Canvas>
+
             <div className="flex flex-col items-center mt-4">
               <div className="bg-white border-8 border-gray-700 rounded-full p-3 flex items-center">
                 <label className="text-black font-Poppins  mr-2">Ring Colour</label>
@@ -78,11 +126,11 @@ const Hero = () => {
             </div>
           </div>
           <div className="flex flex-col items-center space-y-2 ml-4">
-            <div className="bg-white border border-gray-700 rounded-lg p-4 flex items-center">
-              <div className="flex flex-col items-start" style={{ width: '40px' }}>
+            {/* <div className="bg-white border border-gray-700 rounded-lg p-4 flex items-center"> */}
+              {/* <div className="flex flex-col items-start" style={{ width: '40px' }}>
                 <label className="text-black font-Poppins mb-2 rotate-90">Diamond Color:</label>
-              </div>
-              <div className="flex flex-col space-y-2 ml-4">
+              </div> */}
+              {/* <div className="flex flex-col space-y-2 ml-4">
                 {diamondColors.map((color) => (
                   <div
                     key={color.name}
@@ -91,8 +139,8 @@ const Hero = () => {
                     onClick={() => setDiamondColor(color.name)}
                   ></div>
                 ))}
-              </div>
-            </div>
+              </div> */}
+            {/* </div> */}
           </div>
         </div>
       </div>
