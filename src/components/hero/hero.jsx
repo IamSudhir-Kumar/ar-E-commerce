@@ -94,8 +94,8 @@ const Hero = () => {
               />
               <Suspense fallback={null}>
                 <Environment preset="city" />
-                <Black
-                  scale={[7, 7, 7]}
+                <Old
+                  scale={[2.5, 2.5, 2.5]}
                   position={[0, -0.1, 0]}
                   rotation={[-0.9, Math.PI, Math.PI / 5]}
                   castShadow
