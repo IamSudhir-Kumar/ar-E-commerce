@@ -17,7 +17,7 @@ const WhyConnex = () => {
         <div className="w-full md:w-1/2 lg:w-auto flex justify-center canvas-container">
           <Canvas>
             <ambientLight />
-            <Environment preset="warehouse" />
+            <Environment preset="sunset" />
             <pointLight position={[10, 10, 10]} />
             <Timex
               scale={[0.5, 0.5, 0.5]}
