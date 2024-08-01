@@ -3,6 +3,7 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment } from '@react-three/drei';
 import '../styles.css'; // Ensure this path is correct
 import Watch from '../models/Watch';
+import Timex from "../models/Timex";
 
 const WhyConnex = () => {
   return (
@@ -18,9 +19,9 @@ const WhyConnex = () => {
             <ambientLight />
             <Environment preset="warehouse" />
             <pointLight position={[10, 10, 10]} />
-            <Watch
-              scale={[1.5, 1.5, 1.5]}
-              position={[0, -1, -5]}
+            <Timex
+              scale={[0.5, 0.5, 0.5]}
+              position={[0, 2, -5]}
               castShadow
               receiveShadow
             />
