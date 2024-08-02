@@ -1,8 +1,6 @@
-// import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment } from '@react-three/drei';
-import '../styles.css'; // Ensure this path is correct
-import Watch from '../models/Watch';
+import '../styles.css';
 import Timex from "../models/Timex";
 
 const WhyConnex = () => {
@@ -15,17 +13,33 @@ const WhyConnex = () => {
       </div>
       <div className="flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0 md:space-x-16 w-full max-w-6xl mt-8 md:mt-16">
         <div className="w-full md:w-1/2 lg:w-auto flex justify-center canvas-container">
-          <Canvas>
-            <ambientLight />
+          <Canvas shadows camera={{ position: [0, 2, 12], fov: 50 }}>
+            <ambientLight intensity={0.3} />
             <Environment preset="sunset" />
-            <pointLight position={[10, 10, 10]} />
+            <directionalLight
+              position={[5, 10, 5]}
+              intensity={1.5}
+              castShadow
+              shadow-mapSize-width={2048}
+              shadow-mapSize-height={2048}
+              shadow-camera-far={50}
+              shadow-camera-left={-10}
+              shadow-camera-right={10}
+              shadow-camera-top={10}
+              shadow-camera-bottom={-10}
+              shadow-bias={-0.005}
+            />
             <Timex
               scale={[0.5, 0.5, 0.5]}
-              position={[0, 2, -5]}
+              position={[0, 1, -5]}
               castShadow
               receiveShadow
             />
-            <OrbitControls enableZoom={true} />
+            <OrbitControls
+              enableZoom={false}
+              minPolarAngle={Math.PI / 2}
+              maxPolarAngle={Math.PI / 2}
+            />
           </Canvas>
         </div>
         <div className="max-w-xl font-Poppins">

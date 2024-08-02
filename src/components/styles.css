@@ -1,20 +1,8 @@
-/* .model-view-css-fix{
-  object-fit: contain;
-  height: 80vh;
-  width:auto;  
-}
-model-viewer {
-  width: 60vh;
-  height: 70vh;
-}  */
-
-
-
 .canvas-container {
   width: 100%;
-  height: 600px; /* You can adjust the height as needed */
-  min-height: 250px; /* Minimum height */
-  max-height: 600px; /* Maximum height */
+  height: 500px; /* Increased height for a larger canvas */
+  min-height: 300px; /* Increased minimum height */
+  max-height: 700px; /* Increased maximum height */
   position: relative; /* Ensure proper positioning */
 }
 
