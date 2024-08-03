@@ -99,9 +99,7 @@ const PlansPricing = () => {
                 ))}
               </ul>
               <button className="bg-[#5c6868] text-white font-bold py-2 px-4 rounded-full hover:bg-green-900 transition duration-300">
-                {plan.title === 'Enterprise' ? 
-                  <a href="https://calendly.com/sudhir09014902020-msijanakpuri/meeting-regarding-price-plans" target='_blank' rel="noopener noreferrer">Contact Us</a> 
-                  : 'Sign Up Now'}
+                <a href="https://calendly.com/sudhir09014902020-msijanakpuri/meeting-regarding-price-plans" target='_blank' rel="noopener noreferrer">Contact Us</a>
               </button>
               {index < plans.length - 1 && (
                 <div className="absolute top-0 right-0 h-full w-[2px] bg-gradient-to-b from-transparent via-white to-transparent transform translate-x-1/2"></div>
@@ -126,9 +124,7 @@ const PlansPricing = () => {
                   ))}
                 </ul>
                 <button className="bg-[#5c6868] text-white font-bold py-2 px-4 rounded-full hover:bg-green-900 transition duration-300">
-                  {plan.title === 'Enterprise' ? 
-                    <a href="https://calendly.com/sudhir09014902020-msijanakpuri/meeting-regarding-price-plans" target='_blank' rel="noopener noreferrer">Contact Us</a> 
-                    : 'Sign Up Now'}
+                  <a href="https://calendly.com/sudhir09014902020-msijanakpuri/meeting-regarding-price-plans" target='_blank' rel="noopener noreferrer">Contact Us</a>
                 </button>
               </div>
             ))}
